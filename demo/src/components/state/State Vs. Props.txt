@@ -1,0 +1,24 @@
+State
+----------------------------------------------------------------------------------------------------------------------------
+* Owned by it's component, State holds information about the components.
+* Locally scopped,
+* Mutable/ Writeable,
+* Has setState() method to modifiy properties,
+* Changes to state can be asynchronous.
+* State cannot be accessed by child components.
+* States can be used for rendering dynamic changes with the component.
+* State cannot make components reusable.
+* The State is internal and controlled by the React Component itself.
+
+Props
+---------------------------------------------------------------------------------------------------------------------------
+* Immutable,
+* Has better performance,
+* Can be passed to Child component,
+* State Vs. Props,
+* Props allow you to pass data from one component to other components as an argument.
+* Props can be accessed by the child component.
+* Props are used to communicate between components.
+* Stateless component can have Props.
+* Props make components reusable.
+* Props are external and controlled by whatever renders the component.

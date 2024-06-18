@@ -1,0 +1,39 @@
+React Forms
+--------------------------------------------------------------------------------------------------------------------------------
+* Forms allows the users to interact with the application as well as gather information from the users.
+* Forms can perform many tasks that depend on the nature of your business requirements and logic such as
+     authentication of the user, adding user, searching, filtering, booking, ordering, etc.
+* A form can contain text fields, buttons, checkbox, radio button, etc.
+
+Creating Form:
+    There are mainly two types of form input in React.
+
+   1. Uncontrolled component:
+        -> The DOM itself holds control over the data.
+        -> It maintains its internal state.
+        -> It does not allow validation control.
+        -> It stores the current value using react ref.
+        -> It has limited control over the form data.
+        -> Not predictable because form elements can lose their reference or may be changed/ affected by external sources during the lifecycle of components.
+
+
+   2. Controlled component:
+        -> Here, data is controlled by the parent component.
+        -> It does not maintain its internal state.
+        -> It allows validation control.
+        -> It stores the current value in the form of props / It accepts its current value as a prop..
+        -> It has better control over the form elements and data.
+        -> Predictable because the component handles the form data at every step.
+
+
+Conclusion
+     * React supports two ways to handle the form data, it can either be a Controlled component or an Uncontrolled component.
+     * React provides two distinctively flexible solutions, i.e., model-view (controlled) and only-view (uncontrolled).
+     * Controlled components have a one-way data flow where the state inside the component serves as the single source of truth.
+     * The parent component has held over the form data in the controlled component.
+     * The DOM itself handles all the form data in an uncontrolled component.
+     * It can become cumbersome to work with controlled components if there are many input fields on the page.
+     * Controlled component react provides validation benefits on every keystroke of the user.
+     * All the state changes in a controlled component are made with the help of the setState() method.
+     * An uncontrolled component stores the current value of the form data using react ref.
+     * Uncontrolled component react are helpful when we need to integrate react with other libraries which do not follow react design patterns.

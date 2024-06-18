@@ -1,0 +1,28 @@
+React State
+------------------------------------------------------------------------------------------------------------------------------
+* The state object is where you store property values that belong to the component.
+* When the state object changes, the component re-renders.
+* State can hold any kind of JavaScript value, including objects. 
+    But you shouldn’t change objects that you hold in the React state directly.
+    Instead, when you want to update an object, you need to create a new one (or make a copy of an existing one), 
+    and then set the state to use that copy.
+
+React State Hook
+------------------------------------------------------------------------------------------------------------------------------
+* Mutation : You can store any kind of JavaScript value in state.
+
+useState
+------------------------------------------------------------------------------------------------------------------------------
+* Call useState at the top level of your component to declare a state variable.
+
+* useState is a React Hook that lets you add a state variable to your component.
+    const [state, setState] = useState(initialState)
+
+* Parameters :
+    -> initialState: The value you want the state to be initially. 
+        It can be a value of any type, but there is a special behavior for functions. 
+        This argument is ignored after the initial render.
+
+    -> If you pass a function as initialState, it will be treated as an initializer function. 
+         It should be pure, should take no arguments, and should return a value of any type. 
+         React will call your initializer function when initializing the component, and store its return value as the initial state.

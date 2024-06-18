@@ -1,0 +1,9 @@
+React Events
+------------------------------------------------------------------------------------------------------------------------------
+* An event is an action that could be triggered as a result of the user action or system generated event. 
+    For example, a mouse click, loading of a web page, pressing a key, window resizes, and other interactions are called events.
+
+* React has its own event handling system which is very similar to handling events on DOM elements.
+
+* he react event handling system is known as Synthetic Events. 
+    The synthetic event is a cross-browser wrapper of the browser's native event.
