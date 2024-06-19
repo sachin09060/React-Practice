@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Product(props) {
+  const navigate = useNavigate();
+
+  const back = () => {
+    navigate("/");
+  };
   return (
     <div>
       <img
@@ -10,6 +16,8 @@ function Product(props) {
       <h4>{props.name}</h4>
       <p>Non-Slip Fitness Leisure Running Sneakers</p>
       <h4>{props.price}</h4>
+      <br />
+      <button onClick={back}>Back</button>
     </div>
   );
 }

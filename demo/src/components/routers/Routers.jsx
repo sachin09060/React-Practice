@@ -7,6 +7,8 @@ import Form from "../forms/Form"
 import MyComponent from "./../state/MyComponent"
 import Counter from "./../state/Counter"
 import Product from "./../props/Product"
+import Greeting from "../conditionalRendering/Greeting"
+import ThemeProvider from "../context/ThemeProvider";
 
 function RoutersPage(){
     return (
@@ -21,6 +23,8 @@ function RoutersPage(){
             <Route path="/myComponent" element={<MyComponent/>}/>
             <Route path="/counter" element={<Counter/>}/>
             <Route path="/product" element={<Product/>}/>
+            <Route path="/condtional_rendering" element={<Greeting/>}/>
+            <Route path="/context" element={<ThemeProvider/>}/>
         </Routes>
         </BrowserRouter>
         </>

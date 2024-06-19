@@ -26,6 +26,9 @@ function Home() {
             <li>
                 <Link to="/product" > Product </Link>
             </li>
+            <li>
+                <Link to="/condtional_rendering" > Conditinal Rendering </Link>
+            </li>
         </ol>
         </>
     );
