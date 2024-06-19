@@ -14,7 +14,7 @@ function Product(props) {
         alt="sneakers"
       />
       <h4>{props.name}</h4>
-      <p>Non-Slip Fitness Leisure Running Sneakers</p>
+      <p>{props.description}</p>
       <h4>{props.price}</h4>
       <br />
       <button onClick={back}>Back</button>

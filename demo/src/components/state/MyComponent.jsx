@@ -20,12 +20,10 @@ function MyComponent() {
       <h1>
         Hello {name}, your age is {age}
       </h1>
+      <p>useState Example, Here We createing name and age states and by clicking button we set the values to those states.</p>
       <button onClick={handleClick}>Click me</button>
       <br />
       <button onClick={back}>Back</button>
-      <br />
-      <br />
-      <p>useState Example, Here We createing name and age states and by clicking button we set the values to those states.</p>
     </>
   );
 }

@@ -6,17 +6,18 @@ function ParentComponent() {
 
   const navigate = useNavigate();
   const back = () => {
-    navigate("/")
+    navigate("/");
   };
 
   return (
     <>
-      <ChildComponent message={message}  name="Sachin" age="24" />
+      <p>
+        Props example, here We render Child Component inside parent component
+        and passing props from parent to Child.
+      </p>
+      <ChildComponent message={message} name="Sachin" age="24" />
       <br />
       <button onClick={back}>Back</button>
-      <br />
-      <br />
-      <p>Props example, here We render Child Component inside parent component and passing props from parent to Child.</p>
     </>
   );
 }

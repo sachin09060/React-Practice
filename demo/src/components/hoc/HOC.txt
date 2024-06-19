@@ -1,0 +1,3 @@
+Higher-Order Component
+-------------------------------------------------------------------------------------------------------------------------------
+* Higher-Order Component in React takes a component as argument and returns a new component with added properties or behaviors.
