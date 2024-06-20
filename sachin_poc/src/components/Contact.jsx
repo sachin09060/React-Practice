@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
-import "./static/Contact.css";
+import './static/style.css'
 
 const Contact = () => {
   const [data, setData] = useState([]);
@@ -11,6 +11,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [editIndex, setEditIndex] = useState(-1);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -18,31 +20,51 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setData([...data, formData]);
-    setFormData({ name: "", email: "", message: "" });
-    };
+    if (editIndex === -1) {
+      setData([...data, formData]);
+    } else {
+      const updatedData = [...data];
+      updatedData[editIndex] = formData;
+      setData(updatedData);
+      setEditIndex(-1);
+    }
+    setFormData({ username: "", email: "", message: "" });
+  };
 
   const handleDelete = (index) => {
     const newData = data.filter((_, i) => i !== index);
     setData(newData);
   };
 
+  const handleUpdate = (index) => {
+    setFormData(data[index]);
+    setEditIndex(index);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('data', JSON.stringify(data));
+  }, [data]);
+
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem('data'));
+    if (storedData) {
+      setData(storedData);
+    }
+  }, []);
+
   return (
     <>
       <NavBar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="Container">
+      <div className="about-container">
         <div className="Form">
-          <h1>Contact Form</h1>
+          <h1>Contact Us</h1>
           <form onSubmit={handleSubmit}>
             <div>
               <label>Name:</label>
               <input
                 type="text"
                 placeholder="Enter your name"
+                required
                 name="username"
                 value={formData.username}
                 onChange={handleChange}
@@ -53,6 +75,7 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
+                required
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -63,19 +86,20 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Enter your message"
+                required
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">{editIndex === -1 ? 'Submit' : 'Update'}</button>
           </form>
         </div>
         <div>
           <br />
-          <h1>List of Messages</h1>
+          <h1>List of Messages from Users</h1>
           <div className="Table">
-            <table border={1} cellSpacing={2}>
+            <table>
               <thead className="THead">
                 <tr>
                   <th>Name</th>
@@ -87,12 +111,14 @@ const Contact = () => {
               <tbody>
                 {data.map((item, index) => (
                   <tr key={index} className="TRow">
-                    <td>{item.username}</td>
+                    <td><b>{item.username}</b></td>
                     <td>{item.email}</td>
                     <td>{item.message}</td>
                     <td>
-                      <button onClick={() => handleDelete(index)}>Delete</button>
-                      <button>Edit</button>
+                      <button onClick={() => handleDelete(index)}>
+                        Delete
+                      </button>
+                      <button onClick={() => handleUpdate(index)}>Edit</button>
                     </td>
                   </tr>
                 ))}

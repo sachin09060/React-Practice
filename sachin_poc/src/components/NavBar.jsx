@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom";
-import "./static/Navbar.css";
-
+import { Link, NavLink } from "react-router-dom";
+import './static/style.css'
 const NavBar = () => {
   return (
     <div>
       <header className="Header">
         <nav className="Nav-container">
           <div className="Nav-menu" id="nav-menu">
-            <ul className="Nav_list">
+            <ul class="menu">
               <li className="Nav-item">
                 <NavLink className="Nav-logo">
                   MOVIE BOX
@@ -19,9 +18,9 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about" className="Nav-link">
+                <Link  to="/about" className="Nav-link">
                   About
-                </NavLink>
+                </Link>
               </li>
               <li>
                 <NavLink to="/contact" className="Nav-link">
