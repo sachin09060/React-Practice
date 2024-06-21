@@ -6,7 +6,7 @@ const NavBar = () => {
       <header className="Header">
         <nav className="Nav-container">
           <div className="Nav-menu" id="nav-menu">
-            <ul class="menu">
+            <ul className="menu">
               <li className="Nav-item">
                 <NavLink className="Nav-logo">
                   MOVIE BOX
@@ -25,6 +25,11 @@ const NavBar = () => {
               <li>
                 <NavLink to="/contact" className="Nav-link">
                   Contact
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/counter" className="Nav-link">
+                  Counter
                 </NavLink>
               </li>
             </ul>

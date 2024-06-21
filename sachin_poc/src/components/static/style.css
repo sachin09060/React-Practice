@@ -274,3 +274,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
+
+.counter-container{
+  margin-top: 120px;
+}

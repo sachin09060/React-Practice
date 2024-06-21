@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NavBar from "./NavBar";
 import './static/style.css'
 
@@ -40,17 +40,6 @@ const Contact = () => {
     setFormData(data[index]);
     setEditIndex(index);
   };
-
-  useEffect(() => {
-    localStorage.setItem('data', JSON.stringify(data));
-  }, [data]);
-
-  useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('data'));
-    if (storedData) {
-      setData(storedData);
-    }
-  }, []);
 
   return (
     <>

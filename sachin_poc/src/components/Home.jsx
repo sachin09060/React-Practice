@@ -1,8 +1,12 @@
 import NavBar from "./NavBar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./static/style.css";
+import { useDispatch, useSelector } from "react-redux";
+import { submitForm } from "../actions/counterActions";
 const Home = () => {
-  const [movie, setMovie] = useState([]);
+  
+  const movieData = useSelector((state) => state.movie);
+  const dispatch = useDispatch();
 
   const [newMovie, setNewMovie] = useState({
     movieName: "",
@@ -18,20 +22,10 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMovie([...movie, newMovie]);
+    dispatch(submitForm(newMovie))
     setNewMovie({ movieName: "", yearOfRelease: "", director: "", src: "" });
   };
 
-  useEffect(() => {
-    localStorage.setItem("movie", JSON.stringify(movie));
-  }, [movie]);
-
-  useEffect(() => {
-    const movie = JSON.parse(localStorage.getItem("movie"));
-    if (movie) {
-      setMovie(movie);
-    }
-  }, []);
 
   return (
     <>
@@ -48,8 +42,8 @@ const Home = () => {
                   type="text"
                   placeholder="Enter Movie Name"
                   required
-                  name="movie"
-                  value={setNewMovie.movie}
+                  name="movieName"
+                  value={setNewMovie.movieName}
                   onChange={handleChange}
                 />
               </div>
@@ -96,32 +90,14 @@ const Home = () => {
           <h1>List Of Suggested Movies!</h1>
           <div className="card-gallery">
             <div className="Card-body">
-              {movie.map((item, index) => (
+              {movieData.map((item, index) => (
                 <div className="Card">
                   <img className="image" src={item.src} alt="Avatar" />
                   <div class="Card-container">
-                    <h1>
-                      MOVIE:{" "}
-                      <span>
-                        {" "}
-                        <b> {item.movie}</b>
-                      </span>
-                    </h1>
-                    <p2>
-                      YEAR:
-                      <span>
-                        {" "}
-                        <b> {item.yearOfRelease}</b>
-                      </span>{" "}
-                    </p2>
+                    <h1>MOVIE:<span><b> {item.movieName}</b></span></h1>
+                    <p2>YEAR:<span><b> {item.yearOfRelease}</b></span></p2>
                     <br />
-                    <p1>
-                      DIRECTED BY:{" "}
-                      <span>
-                        {" "}
-                        <b> {item.director} </b>
-                      </span>
-                    </p1>
+                    <p1>DIRECTED BY:<span><b>{item.director}</b></span></p1>
                   </div>
                 </div>
               ))}

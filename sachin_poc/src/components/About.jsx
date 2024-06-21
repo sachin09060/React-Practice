@@ -34,7 +34,7 @@ const About = () => {
       </div>
       <br />
       <br />
-      <div class="About-container">
+      <div className="About-container">
         <table>
           <thead>
             <tr>

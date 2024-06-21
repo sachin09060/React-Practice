@@ -1,0 +1,11 @@
+.container {
+    background-color: #fff;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container .container-heading {
+    font-family: cursive;
+    font-style: italic;
+}
