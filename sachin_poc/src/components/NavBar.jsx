@@ -32,6 +32,11 @@ const NavBar = () => {
                   Counter
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/counterZustand" className="Nav-link">
+                CounterZustand
+                </NavLink>
+              </li>
             </ul>
           </div>
         </nav>
