@@ -50,6 +50,9 @@ function Home() {
         <li>
           <Link to="/useEffectArray"> useEffectArray </Link>
         </li>
+        <li>
+          <Link to="/useReducer"> useReducer </Link>
+        </li>
       </ol>
     </>
   );

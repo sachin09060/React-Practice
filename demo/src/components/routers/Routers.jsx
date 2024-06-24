@@ -15,6 +15,7 @@ import { UseStateEx1 } from "../state/UseStateEx1";
 import { UseStateEx2 } from "../state/UseStateEx2";
 import { UseEffectEx1 } from "../useEffect/UseEffectEx1";
 import { UseEffectArray } from "../useEffect/UseEffectArray";
+import { UseReducer } from "../useReducer/UseReducer";
 
 
 function RoutersPage(){
@@ -38,6 +39,7 @@ function RoutersPage(){
             <Route path="/useStateEx2" element={<UseStateEx2/>}/>
             <Route path="/useEffectEx1" element={<UseEffectEx1/>}/>
             <Route path="/useEffectArray" element={<UseEffectArray/>}/>
+            <Route path="/useReducer" element={<UseReducer/>}/>
         </Routes>
         </BrowserRouter>
         </>
