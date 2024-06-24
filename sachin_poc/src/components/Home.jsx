@@ -91,9 +91,9 @@ const Home = () => {
           <div className="card-gallery">
             <div className="Card-body">
               {movieData.map((item, index) => (
-                <div className="Card">
+                <div className="Card" key={index}>
                   <img className="image" src={item.src} alt="Avatar" />
-                  <div class="Card-container">
+                  <div className="Card-container">
                     <h1>MOVIE:<span><b> {item.movieName}</b></span></h1>
                     <p2>YEAR:<span><b> {item.yearOfRelease}</b></span></p2>
                     <br />

@@ -32,6 +32,24 @@ function Home() {
         <li>
           <Link to="/context"> Context </Link>
         </li>
+        <li>
+          <Link to="/propsComp"> Props Component </Link>
+        </li>
+        <li>
+          <Link to="/list"> List </Link>
+        </li>
+        <li>
+          <Link to="/useStateEx1"> useStateEx1 </Link>
+        </li>
+        <li>
+          <Link to="/useStateEx2"> useStateEx2 </Link>
+        </li>
+        <li>
+          <Link to="/useEffectEx1"> useEffectEx1 </Link>
+        </li>
+        <li>
+          <Link to="/useEffectArray"> useEffectArray </Link>
+        </li>
       </ol>
     </>
   );

@@ -24,7 +24,7 @@ function ControlledComponent() {
           type="text"
           name="name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(event) => setName(event.target.value)}
         />
         <button type="submit">Submit</button>
         <br />
