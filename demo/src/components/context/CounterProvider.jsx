@@ -14,7 +14,6 @@ const CounterProvider = ({children}) => {
         <CounterContext.Provider value={{count, increment, decrement, reset}}>
             {children}
         </CounterContext.Provider>
-
         </>
     );
 }

@@ -53,6 +53,18 @@ function Home() {
         <li>
           <Link to="/useReducer"> useReducer </Link>
         </li>
+        <li>
+          <Link to="/useReducerCounter"> useReducerCounter </Link>
+        </li>
+        <li>
+          <Link to="/useContextParent"> useContextParent </Link>
+        </li>
+        <li>
+          <Link to="/useRef"> useRef </Link>
+        </li>
+        <li>
+          <Link to="/useMemo"> useMemo </Link>
+        </li>
       </ol>
     </>
   );

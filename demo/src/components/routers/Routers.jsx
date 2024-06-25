@@ -16,6 +16,10 @@ import { UseStateEx2 } from "../state/UseStateEx2";
 import { UseEffectEx1 } from "../useEffect/UseEffectEx1";
 import { UseEffectArray } from "../useEffect/UseEffectArray";
 import { UseReducer } from "../useReducer/UseReducer";
+import { UseReducerCounter } from "../useReducer/UseReducerCounter";
+import { Component1 } from "../useContext/Component1";
+import { UseRef } from "../useRef/UseRef";
+import { UseMemo } from "../useMemo/UseMemo";
 
 
 function RoutersPage(){
@@ -40,6 +44,10 @@ function RoutersPage(){
             <Route path="/useEffectEx1" element={<UseEffectEx1/>}/>
             <Route path="/useEffectArray" element={<UseEffectArray/>}/>
             <Route path="/useReducer" element={<UseReducer/>}/>
+            <Route path="/useReducerCounter" element={<UseReducerCounter/>}/>
+            <Route path="/useContextParent" element={<Component1/>}/>
+            <Route path="/useRef" element={<UseRef/>}/>
+            <Route path="/useMemo" element={<UseMemo/>}/>
         </Routes>
         </BrowserRouter>
         </>
