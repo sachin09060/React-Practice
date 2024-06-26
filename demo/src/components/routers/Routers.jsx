@@ -20,6 +20,7 @@ import { UseReducerCounter } from "../useReducer/UseReducerCounter";
 import { Component1 } from "../useContext/Component1";
 import { UseRef } from "../useRef/UseRef";
 import { UseMemo } from "../useMemo/UseMemo";
+import { UseCallbackParent } from "../useCallback/UseCallbackParent";
 
 
 function RoutersPage(){
@@ -48,6 +49,7 @@ function RoutersPage(){
             <Route path="/useContextParent" element={<Component1/>}/>
             <Route path="/useRef" element={<UseRef/>}/>
             <Route path="/useMemo" element={<UseMemo/>}/>
+            <Route path="/useCallback" element={<UseCallbackParent />}/>
         </Routes>
         </BrowserRouter>
         </>
