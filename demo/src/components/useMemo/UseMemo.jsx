@@ -16,7 +16,10 @@ export const UseMemo = () => {
 
   const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
+  // const calculation = expensiveCalculation(count);
+
   const handleAdd = () => {
+    console.log("hitting")
     setTodos((item) => [...item, "New Todo!"]);
   };
 

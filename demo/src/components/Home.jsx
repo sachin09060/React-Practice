@@ -68,6 +68,24 @@ function Home() {
         <li>
           <Link to="/useCallback"> useCallback </Link>
         </li>
+        <li>
+          <Link to="/useLayoutEffect"> useLayoutEffect </Link>
+        </li>
+        <li>
+          <Link to="/useImperativeHandle"> useImperativeHandle </Link>
+        </li>
+        <li>
+          <Link to="/usedeferredvalue"> usedeferredvalue </Link>
+        </li>
+        <li>
+          <Link to="/useTransition"> useTransition </Link>
+        </li>
+        <li>
+          <Link to="/useIdForm"> useIdForm </Link>
+        </li>
+        <li>
+          <Link to="/useInsertionEffect"> useInsertionEffect </Link>
+        </li>
       </ol>
     </>
   );

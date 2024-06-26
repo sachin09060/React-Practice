@@ -7,6 +7,7 @@ export const UseCallbackParent = () => {
   const handleClick = useCallback(() => {
     setCount(count + 1);
   }, [count]);
+  
   return (
     <>
       <p>Parent Component</p>
