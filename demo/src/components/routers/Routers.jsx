@@ -27,6 +27,7 @@ import { SearchComponent } from "../useDeferredValue/SearchComponent";
 import { UseTransition } from "../useTransition/UseTransition";
 import { UseIdForm } from "../useId/UseIdForm";
 import { UseInsertionEffect } from "../useInsertionEffect/UseInsertionEffect";
+import UseMemo1 from "../useMemo/useMemo1";
 
 function RoutersPage() {
   return (
@@ -60,6 +61,7 @@ function RoutersPage() {
           <Route path="/useContextParent" element={<Component1 />} />
           <Route path="/useRef" element={<UseRef />} />
           <Route path="/useMemo" element={<UseMemo />} />
+          <Route path="/UseMemo1" element={<UseMemo1 />} />
           <Route path="/useCallback" element={<UseCallbackParent />} />
           <Route path="/useLayoutEffect" element={<UseLayoutEffect />} />
           <Route
