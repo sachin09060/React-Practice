@@ -34,7 +34,7 @@ const ExpenseApp = () => {
     <div>
       <h1>Expense Tracker!</h1>
       <ExpenseInput addExpense={handleAddExpense} />
-      <p>Total Amount: ${totalAmount.toFixed(2)}</p>
+      <p>Total Amount: ₹{totalAmount}</p>
       <ExpenseList expenses={expenses} removeExpense={handleRemoveExpense} />
     </div>
   );
