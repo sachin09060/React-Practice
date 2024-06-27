@@ -20,15 +20,10 @@ export const CustomInput = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     focus: () => {
-      if (inputRef.current) {
         inputRef.current.focus();
-      }
     },
     getValue: () => {
-      if (inputRef.current) {
         return inputRef.current.value;
-      }
-      return "";
     },
   }));
 

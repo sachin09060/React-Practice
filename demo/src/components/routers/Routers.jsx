@@ -30,6 +30,12 @@ import { UseInsertionEffect } from "../useInsertionEffect/UseInsertionEffect";
 import UseMemo1 from "../useMemo/useMemo1";
 import FocusInput from "../useRef/FocusInput";
 import HookTimer from "../useRef/HookTimer";
+import DocTitleOne from "../custom Hooks/DocTitleOne";
+import DocTitleTwo from "../custom Hooks/DocTitleTwo";
+import CounterOne from "../custom Hooks/CounterOne";
+import CounterTwo from "../custom Hooks/CounterTwo";
+import UserForm from "../custom Hooks/UserForm";
+import EnhancedComponent from "../hoc/EnhancedComponent";
 
 function RoutersPage() {
   return (
@@ -48,6 +54,7 @@ function RoutersPage() {
           <Route path="/parentComponent" element={<ParentComponent />} />
           <Route path="/form" element={<Form />} />
           <Route path="/myComponent" element={<MyComponent />} />
+          <Route path="/hocComponent" element={<EnhancedComponent />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/product" element={<ProductProps />} />
           <Route path="/condtional_rendering" element={<Greeting />} />
@@ -76,6 +83,11 @@ function RoutersPage() {
           <Route path="/useTransition" element={<UseTransition />} />
           <Route path="/useIdForm" element={<UseIdForm />} />
           <Route path="/useInsertionEffect" element={<UseInsertionEffect />} />
+          <Route path="/customHooks" element={<DocTitleOne />} />
+          <Route path="/customHooks2" element={<DocTitleTwo />} />
+          <Route path="/customHooks3" element={<CounterOne />} />
+          <Route path="/customHooks4" element={<CounterTwo />} />
+          <Route path="/customHooks5" element={<UserForm />} />
         </Routes>
       </BrowserRouter>
     </>
