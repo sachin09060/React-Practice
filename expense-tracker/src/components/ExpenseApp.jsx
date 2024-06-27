@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ExpenseInput from "./ExpenseInput";
 import { addExpense, removeExpense } from "../actions/expenseActions";
@@ -7,10 +7,14 @@ import ExpenseList from "./ExpenseList";
 const ExpenseApp = () => {
   const dispatch = useDispatch();
   const expenses = useSelector(state => state.expenses);
+  const expenseListRef = useRef();
 
   const handleAddExpense = useCallback(
     (expense) => {
       dispatch(addExpense(expense));
+      if (expenseListRef.current) {
+        expenseListRef.current.alertMessage();
+      }
     },
     [dispatch]
   );
@@ -18,12 +22,15 @@ const ExpenseApp = () => {
   const handleRemoveExpense = useCallback(
     (expenseId) => {
       dispatch(removeExpense(expenseId));
+      if (expenseListRef.current) {
+        expenseListRef.current.alertMessage();
+      }
     },
     [dispatch]
   );
 
   useEffect(() => {
-    console.log('App component mounted or expenses changed');
+    console.log('(useEffect) ---------> ExpenseApp component mounted or expenses state updated!');
   }, [expenses]);
 
   const totalAmount = useMemo(() => {
@@ -35,7 +42,7 @@ const ExpenseApp = () => {
       <h1>Expense Tracker!</h1>
       <ExpenseInput addExpense={handleAddExpense} />
       <p>Total Amount: ₹{totalAmount}</p>
-      <ExpenseList expenses={expenses} removeExpense={handleRemoveExpense} />
+      <ExpenseList ref={expenseListRef} expenses={expenses} removeExpense={handleRemoveExpense} />
     </div>
   );
 };

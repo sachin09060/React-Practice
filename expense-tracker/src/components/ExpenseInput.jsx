@@ -28,7 +28,8 @@ const ExpenseInput = ({ addExpense }) => {
       <div>
         <input
           type="number"
-          placeholder="Enter amount...."
+          placeholder="Enter Amount...."
+          ref={inputRef}
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />

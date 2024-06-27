@@ -10,14 +10,14 @@ const ExpenseList = forwardRef(({ expenses, removeExpense }, ref) => {
   }));
 
   useLayoutEffect(() => {
-    console.log('ExpenseList: DOM updated');
+    console.log('(useLayoutEffect) ------> ExpenseList: DOM updated whenever expenses state updated!');
   }, [expenses]);
 
   return (
     <ul ref={listRef}>
       {expenses.map(expense => (
         <li key={expense.id}>
-          {expense.description}: ${expense.amount.toFixed(2)}
+          {expense.description}: ₹{expense.amount}
           <button onClick={() => removeExpense(expense.id)}>Remove</button>
         </li>
       ))}
