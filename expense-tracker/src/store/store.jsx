@@ -1,13 +1,15 @@
-const { createStoreHook } = require("react-redux");
-const { persistReducer, persistStore } = require("redux-persist");
-const { default: storage } = require("redux-persist/lib/storage");
-const { default: expenseReducer } = require("../reducers/expenseReducer");
+import { createStore } from 'redux';
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import expenseReducer from '../reducers/expenseReducer';
 
 const persistConfig = {
-    key: 'root',
-    storage
+  key: 'root',
+  storage,
 };
 
-const persist = persistReducer(persistConfig, expenseReducer); 
-const store = createStoreHook(persist);
-persistStore(store);
+const persistedReducer = persistReducer(persistConfig, expenseReducer);
+const store = createStore(persistedReducer);
+const persistor = persistStore(store);
+
+export { store, persistor };
