@@ -1,35 +1,36 @@
 import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 
+const initialState = 0;
+
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      throw state;
+  }
+};
+
 export const UseReducerCounter = () => {
+  const [count, dispatch] = useReducer(reducer, initialState);
 
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "increment":
-        return { count: state.count + 1 };
-      case "decrement":
-        return { count: state.count - 1 };
-      case "reset":
-        return { count: 0}
-      default:
-        throw new Error();
-    }
-  };
-
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
-  
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   return (
     <>
-      <h1>Count: {state.count}</h1>
-      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      <h1>Count: {count}</h1>
+      <button onClick={() => dispatch("increment")}>Increment</button>
+      <button onClick={() => dispatch("decrement")}>Decrement</button>
+      <button onClick={() => dispatch("reset")}>Reset</button>
       <br />
       <button onClick={handleBack}>Back</button>
     </>

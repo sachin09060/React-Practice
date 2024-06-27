@@ -63,6 +63,12 @@ function Home() {
           <Link to="/useRef"> useRef </Link>
         </li>
         <li>
+          <Link to="/useRef1"> useRef1 </Link>
+        </li>
+        <li>
+          <Link to="/useRef2"> useRef2 </Link>
+        </li>
+        <li>
           <Link to="/useMemo"> useMemo </Link>
         </li>
         <li>

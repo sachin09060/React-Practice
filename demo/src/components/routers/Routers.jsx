@@ -20,7 +20,7 @@ import { UseReducerCounter } from "../useReducer/UseReducerCounter";
 import { Component1 } from "../useContext/Component1";
 import { UseRef } from "../useRef/UseRef";
 import { UseMemo } from "../useMemo/UseMemo";
-import { UseCallbackParent } from "../useCallback/UseCallbackParent";
+import UseCallbackParent from "../useCallback/UseCallbackParent";
 import { UseLayoutEffect } from "../useLayoutEffect/UseLayoutComponent";
 import { UseImperativeHandle } from "../useImperativeHandle/UseImperativeHandle";
 import { SearchComponent } from "../useDeferredValue/SearchComponent";
@@ -28,6 +28,8 @@ import { UseTransition } from "../useTransition/UseTransition";
 import { UseIdForm } from "../useId/UseIdForm";
 import { UseInsertionEffect } from "../useInsertionEffect/UseInsertionEffect";
 import UseMemo1 from "../useMemo/useMemo1";
+import FocusInput from "../useRef/FocusInput";
+import HookTimer from "../useRef/HookTimer";
 
 function RoutersPage() {
   return (
@@ -60,6 +62,8 @@ function RoutersPage() {
           <Route path="/useReducerCounter" element={<UseReducerCounter />} />
           <Route path="/useContextParent" element={<Component1 />} />
           <Route path="/useRef" element={<UseRef />} />
+          <Route path="/useRef1" element={<FocusInput />} />
+          <Route path="/useRef2" element={<HookTimer />} />
           <Route path="/useMemo" element={<UseMemo />} />
           <Route path="/UseMemo1" element={<UseMemo1 />} />
           <Route path="/useCallback" element={<UseCallbackParent />} />
