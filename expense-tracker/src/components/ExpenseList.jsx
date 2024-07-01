@@ -4,6 +4,9 @@ const ExpenseList = forwardRef(({ expenses, removeExpense }, ref) => {
   const listRef = useRef();
 
   useImperativeHandle(ref, () => ({
+    getExpenses() {
+      return expenses;
+    },
     alertMessage() {
       alert('Expense list updated!');
     }

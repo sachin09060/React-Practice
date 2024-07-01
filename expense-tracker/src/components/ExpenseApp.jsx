@@ -37,12 +37,20 @@ const ExpenseApp = () => {
     return expenses.reduce((total, expense) => total + expense.amount, 0);
   }, [expenses]);
 
+  const getCurrentExpenses = () => {
+    if (expenseListRef.current) {
+      const currentExpenses = expenseListRef.current.getExpenses();
+      console.log('Current expenses from child:', currentExpenses);
+    }
+  };
+
   return (
     <div>
       <h1>Expense Tracker!</h1>
       <ExpenseInput addExpense={handleAddExpense} />
       <p>Total Amount: ₹{totalAmount}</p>
       <ExpenseList ref={expenseListRef} expenses={expenses} removeExpense={handleRemoveExpense} />
+      <button onClick={getCurrentExpenses}>Get Current Expenses</button>
     </div>
   );
 };
