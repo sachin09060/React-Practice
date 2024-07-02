@@ -60,6 +60,9 @@ function Home() {
           <li>
             <Link to="/useReducerCounter"> useReducerCounter </Link>
           </li>
+          <li>
+            <Link to="/table"> Table </Link>
+          </li>
         </div>
         
         <div>
@@ -116,6 +119,9 @@ function Home() {
           </li>
           <li>
             <Link to="/customHooks5"> customHooks5 </Link>
+          </li>
+          <li>
+            <Link to="/newpage"> Newpage </Link>
           </li>
         </div>
       </ol>

@@ -10,6 +10,6 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, expenseReducer);
 const store = createStore(persistedReducer);
-const persistor = persistStore(store);
+persistStore(store);
 
-export { store, persistor };
+export { store };

@@ -36,6 +36,8 @@ import CounterOne from "../custom Hooks/CounterOne";
 import CounterTwo from "../custom Hooks/CounterTwo";
 import UserForm from "../custom Hooks/UserForm";
 import EnhancedComponent from "../hoc/EnhancedComponent";
+import { BasicTable } from "../react-table/BasicTable";
+import { StudentForm } from "../new-page/StudentForm";
 
 function RoutersPage() {
   return (
@@ -88,6 +90,8 @@ function RoutersPage() {
           <Route path="/customHooks3" element={<CounterOne />} />
           <Route path="/customHooks4" element={<CounterTwo />} />
           <Route path="/customHooks5" element={<UserForm />} />
+          <Route path="/table" element={<BasicTable />} />
+          <Route path="/newpage" element={<StudentForm />} />
         </Routes>
       </BrowserRouter>
     </>
