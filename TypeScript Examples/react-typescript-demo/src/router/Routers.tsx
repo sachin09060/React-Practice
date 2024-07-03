@@ -10,6 +10,16 @@ import Status from "../components/props/Status";
 import Input from "../components/props/Input";
 import Container from "../components/props/Container";
 import LoggedIn from "../components/useState/LoggedIn";
+import User from "../components/useState/User";
+import User2 from "../components/useState/User2";
+import Counter from "../components/useReducer/Counter";
+import Counter2 from "../components/useReducer/Counter2";
+import { ThemeContextProvider } from "../components/useContext/ThemeContext";
+import Box from "../components/useContext/Box";
+import { UserContextProvider } from "../components/useContext/UserContext";
+import UserUseContext from "../components/useContext/User";
+import DOMRef from "../components/useRef/DOMRef";
+import MutableRef from "../components/useRef/MutableRef";
 
 const Routers = () => {
   const personName = {
@@ -74,7 +84,39 @@ const Routers = () => {
             />
           }
         />
+
         <Route path="/loggedin" element={<LoggedIn />} />
+
+        <Route path="/userAuth" element={<User />} />
+
+        <Route path="/userAuth2" element={<User2 />} />
+
+        <Route path="/useReducer" element={<Counter />} />
+
+        <Route path="/useReducer2" element={<Counter2 />} />
+
+        <Route
+          path="/useContext"
+          element={
+            <ThemeContextProvider>
+              <Box />
+            </ThemeContextProvider>
+          }
+        />
+
+        <Route
+          path="/useContext2"
+          element={
+            <UserContextProvider>
+              <UserUseContext />
+            </UserContextProvider>
+          }
+        />
+
+        <Route path="/useRef" element={<DOMRef />} />
+
+        <Route path="/useRef2" element={<MutableRef />} />
+
       </Routes>
     </BrowserRouter>
   );

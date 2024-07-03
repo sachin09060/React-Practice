@@ -9,7 +9,7 @@ const LoggedIn = () => {
     setIsLoggedIn(false);
   };
   return (
-    <div>
+    <div style={{textAlign:'center'}}>
       <div>User is {isLoggedIn ? "logged in" : "logged out"}</div>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleLogout}>Logout</button>
