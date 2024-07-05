@@ -1,17 +1,19 @@
 import React from "react";
+import "./inputField.css";
 
 interface InputFieldProps {
   placeholder: string;
   type?: "text" | "number";
-  value: string | number;
+  value: string | number ;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   inputRef?: React.RefObject<HTMLInputElement>;
   name: string;
+  className: string;
 }
 
 const InputField = (props: InputFieldProps) => {
   return (
-    <div>
+    <div className={props.className}>
       <input
         type={props.type}
         name={props.name}

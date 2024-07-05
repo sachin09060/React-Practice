@@ -1,0 +1,14 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 15px;
+    background-image: linear-gradient(92.88deg, #2e49a9 9.16%, #5444ba 43.89%, #7a54e3 64.72%);
+    font-family:"Segoe UI";
+}
+
+.nav-items{
+    color: #ffffff;
+    text-decoration: none;
+}

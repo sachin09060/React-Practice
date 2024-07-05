@@ -7,28 +7,54 @@
 body {
   height: 100%;
   width: 100%;
-  font-size: 16px;
-}
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
 }
 
 .container {
   background-color: #fff;
   padding-left: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
   text-align: center;
 }
 
 .container .container-heading {
-  font-family: cursive;
-  font-style: italic;
+  font-family: "apple-system", "Segoe UI";
+  text-align: center;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "MORF" 20, "SHLN" 60;
+  font-size: 60px;
 }
 
-h1{
+h1 {
   text-align: center;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+table {
+  border-spacing: 1px;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+.th {
+  text-align: left;
+}
+
+.table-container {
+  margin-left: auto;
+  margin-right: auto;
 }
