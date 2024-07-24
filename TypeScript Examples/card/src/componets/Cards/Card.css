@@ -1,0 +1,43 @@
+.card-continer{
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 250px;
+    height: auto;
+    box-shadow: -.4em .6em .99999999999999em #fff8f34e;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 230px;
+  padding: 0px 10px 0 10px;
+}
+
+.card-img img {
+  width: 250px;
+  transition: all 0.4s ease;
+}
+
+.card-img img:hover {
+  transform: scale(1.2);
+}
+
+.card-heading {
+  margin: 10px 0px 0px 0px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #134B70;
+  font-size: 25px;
+}
+
+.card-description{
+  margin: 0px;
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: gray;
+}

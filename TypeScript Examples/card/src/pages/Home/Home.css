@@ -1,0 +1,23 @@
+.continer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.outer-container {
+  background-image: -webkit-linear-gradient(#187fda, #0a4579, #021526);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.heading{
+    color: #fff;
+    font-family: "Playwrite FR Moderne", cursive;
+    font-size: thin;
+    font-weight: 200;
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+}
