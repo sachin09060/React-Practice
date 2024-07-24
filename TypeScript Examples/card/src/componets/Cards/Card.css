@@ -1,11 +1,11 @@
-.card-continer{
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 250px;
-    height: auto;
-    box-shadow: -.4em .6em .99999999999999em #fff8f34e;
+.card-continer {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  height: auto;
+  box-shadow: -0.4em 0.6em 0.99999999999999em #fff8f34e;
 }
 
 .card-body {
@@ -19,25 +19,33 @@
 
 .card-img img {
   width: 250px;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in;
+  transition: all 0.0999s ease-out;
 }
 
 .card-img img:hover {
-  transform: scale(1.2);
+  transform: scale(1.4) rotateZ(350deg);
 }
 
 .card-heading {
   margin: 10px 0px 0px 0px;
   font-family: "Nunito Sans", sans-serif;
-  color: #134B70;
+  color: #134b70;
   font-size: 25px;
 }
 
-.card-description{
+.card-description {
   margin: 0px;
   font-family: "Karla", sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: gray;
+}
+
+.price{
+  color: #758694e7;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px 0px 0px 5px;
 }

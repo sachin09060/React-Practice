@@ -6,6 +6,7 @@ interface CardProps {
   heading: string;
   description: string;
   src: string;
+  price:string;
 }
 
 const Card = (props: CardProps) => {
@@ -17,6 +18,7 @@ const Card = (props: CardProps) => {
     <>
       <div className="card-continer">
         <div className="card-img">
+          <span><h3 className="price">{props.price}</h3></span>
           <img src={props.src} alt="" />
         </div>
         <div className="card-body">
