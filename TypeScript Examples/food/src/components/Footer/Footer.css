@@ -1,0 +1,30 @@
+.footer-container{
+    background-color: #40534C;
+    width: 100vw;
+    height: auto;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading{
+    color: aliceblue;
+}
+
+.footer-details{
+    color: aliceblue;
+    width: 600px;
+    margin-left: 450px;
+}
+
+.social-icons{
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    gap: 25px;
+}
