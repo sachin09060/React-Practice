@@ -2,7 +2,6 @@ import React from "react";
 import "./Home.css";
 import Header from "../../components/Header/Header";
 import arrow from "../../assets/images/arrow.png";
-import leaf from "../../assets/images/leaf.png";
 import burger from "../../assets/images/burger.png";
 import tomato from "../../assets/images/tomato.png";
 import Footer from "../../components/Footer/Footer";

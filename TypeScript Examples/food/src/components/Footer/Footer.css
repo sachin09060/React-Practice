@@ -3,13 +3,18 @@
     width: 100vw;
     height: auto;
     padding: 10px 0px 10px 0px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .footer-body{
     display: flex;
+    flex-wrap: wrap ;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-heading{
@@ -17,9 +22,12 @@
 }
 
 .footer-details{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     color: aliceblue;
-    width: 600px;
-    margin-left: 450px;
+    max-width: 60%;
+    width: fit-content;
 }
 
 .social-icons{
