@@ -1,0 +1,15 @@
+.dropdown-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-title{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.dropdown-body{
+    width: 40%;
+    margin: 10px 0px 10px 0px
+}

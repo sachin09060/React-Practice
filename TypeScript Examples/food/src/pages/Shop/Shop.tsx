@@ -3,16 +3,16 @@ import Header from "../../components/Header/Header";
 import "./Shop.css";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Cards/Card";
-import pizza from "../../assets/images/pizza.png"
-import hamburger from "../../assets/images/hamburger.png"
-import donut from "../../assets/images/donut.png"
-import kfc from "../../assets/images/kfc.png"
-import icecream from "../../assets/images/ice-cream2.png"
-import coffee from "../../assets/images/latte-coffee.png"
-import friedrice from "../../assets/images/fried-rice.png"
-import noodles from "../../assets/images/noodles.png"
-import samosa from "../../assets/images/samosa.png"
-import chickenrice from "../../assets/images/rice-chicken.png"
+import pizza from "../../assets/images/pizza.png";
+import hamburger from "../../assets/images/hamburger.png";
+import donut from "../../assets/images/donut.png";
+import kfc from "../../assets/images/kfc.png";
+import icecream from "../../assets/images/ice-cream2.png";
+import coffee from "../../assets/images/latte-coffee.png";
+import friedrice from "../../assets/images/fried-rice.png";
+import noodles from "../../assets/images/noodles.png";
+import samosa from "../../assets/images/samosa.png";
+import chickenrice from "../../assets/images/rice-chicken.png";
 
 const Shop = () => {
   const items = [
@@ -44,7 +44,7 @@ const Shop = () => {
       description:
         "Crispy chicken consists of chicken pieces that are coated with seasoned flour or batter and then fried.",
     },
-    
+
     {
       src: icecream,
       heading: "Ice Cream Waffles",
@@ -97,15 +97,15 @@ const Shop = () => {
             <h1>Our Featured Food</h1>
           </div>
           <div className="shop-body">
-          {items.map((item, index) => (
-          <Card
-            key={index}
-            src={item.src}
-            heading={item.heading}
-            price={item.price}
-            description={item.description}
-          />
-        ))}
+            {items.map((item, index) => (
+              <Card
+                key={index}
+                src={item.src}
+                heading={item.heading}
+                price={item.price}
+                description={item.description}
+              />
+            ))}
           </div>
         </div>
         <Footer />
