@@ -14,14 +14,13 @@ const Home = () => {
     setCountry(obj);
     setStatesList(obj.states);
     setStates("");
-    console.log(obj)
-};
-
-const handleState = (obj: any) => {
+    setDistricts("");
+  };
+  
+  const handleState = (obj: any) => {
     setStates(obj);
     setDistrictsList(obj.districts);
     setDistricts("");
-    console.log(obj)
   };
 
   const handleDistrict = (obj: any) => {
