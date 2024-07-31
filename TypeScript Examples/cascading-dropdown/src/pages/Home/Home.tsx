@@ -4,27 +4,27 @@ import Dropdown from "../../components/Select";
 import data from "./data.json";
 
 const Home = () => {
-  const [country, setCountry] = useState("Select Your Country");
-  const [states, setStates] = useState("Select Your State");
+  const [country, setCountry] = useState("");
+  const [regions, setRegions] = useState("");
   const [statesList, setStatesList] = useState([]);
-  const [districts, setDistricts] = useState("Select Your District");
-  const [districtsList, setDistrictsList] = useState([]);
+  const [cities, setCities] = useState("");
+  const [citiesList, setCitiesList] = useState([]);
 
   const handleCountry = (obj: any) => {
     setCountry(obj);
-    setStatesList(obj.states);
-    setStates("");
-    setDistricts("");
+    setStatesList(obj.regions);
+    setRegions("");
+    setCities("");
   };
   
   const handleState = (obj: any) => {
-    setStates(obj);
-    setDistrictsList(obj.districts);
-    setDistricts("");
+    setRegions(obj);
+    setCitiesList(obj.cities);
+    setCities("");
   };
 
   const handleDistrict = (obj: any) => {
-    setDistricts(obj);
+    setCities(obj);
   };
 
   return (
@@ -41,22 +41,22 @@ const Home = () => {
       </div>
       <div className="dropdown">
         <Dropdown
-          placeholder="Select Your State"
-          value={states}
+          placeholder="Select Your Region"
+          value={regions}
           options={statesList}
           onChange={handleState}
-          getOptionLabel={(e: any) => e.state}
-          getOptionValue={(e: any) => e.state}
+          getOptionLabel={(e: any) => e.region}
+          getOptionValue={(e: any) => e.region}
         />
       </div>
       <div className="dropdown">
         <Dropdown
-          placeholder="Select Your District"
-          value={districts}
-          options={districtsList}
+          placeholder="Select Your City"
+          value={cities}
+          options={citiesList}
           onChange={handleDistrict}
-          getOptionLabel={(e: any) => e.district}
-          getOptionValue={(e: any) => e.district}
+          getOptionLabel={(e: any) => e.city}
+          getOptionValue={(e: any) => e.city}
         />
       </div>
     </div>
