@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import "./Home.css";
-import Dropdown from "../../components/Select";
+import "./Home1.css";
+import Dropdown from "../../components/Dropdown/";
 import data from "./data.json";
 
-const Home = () => {
+const Home1 = () => {
   const [country, setCountry] = useState("");
+  const [countryList, setCountryList] = useState([]);
   const [regions, setRegions] = useState("");
   const [statesList, setStatesList] = useState([]);
   const [cities, setCities] = useState("");
   const [citiesList, setCitiesList] = useState([]);
-  const [areas, setAreas] = useState("");
-  const [areasList, setAreasList] = useState([]);
 
   const handleCountry = (obj: any) => {
     setCountry(obj);
+    // setCountryList()
     setStatesList(obj.regions);
     setRegions("");
     setCities("");
@@ -27,20 +27,16 @@ const Home = () => {
 
   const handleDistrict = (obj: any) => {
     setCities(obj);
-    setAreasList(obj.areas)
-  };
-  const handleArea = (obj: any) => {
-    setAreas(obj);
   };
 
   return (
     <div className="home-container" translate="no">
-      <h1 className="heading">Cascading example</h1>
+      {/* <h1 className="heading">Cascading example</h1>
       <div className="dropdown">
         <Dropdown
           placeholder="Select Your Country"
           value={country}
-          options={data}
+        //   options={data}
           onChange={handleCountry}
           getOptionLabel={(e: any) => e.country}
         />
@@ -51,8 +47,8 @@ const Home = () => {
           value={regions}
           options={statesList}
           onChange={handleState}
-          getOptionLabel={(e: any) => e.region}
-          getOptionValue={(e: any) => e.region}
+        //   getOptionLabel={(e: any) => e.region}
+        //   getOptionValue={(e: any) => e.region}
         />
       </div>
       <div className="dropdown">
@@ -61,22 +57,12 @@ const Home = () => {
           value={cities}
           options={citiesList}
           onChange={handleDistrict}
-          getOptionLabel={(e: any) => e.city}
-          getOptionValue={(e: any) => e.city}
+        //   getOptionLabel={(e: any) => e.city}
+        //   getOptionValue={(e: any) => e.city}
         />
-      </div>
-      <div className="dropdown">
-        <Dropdown
-          placeholder="Select Your Area"
-          value={areas}
-          options={areasList}
-          onChange={handleArea}
-          getOptionLabel={(e: any) => e.area}
-          getOptionValue={(e: any) => e.area}
-        />
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Home;
+export default Home1;

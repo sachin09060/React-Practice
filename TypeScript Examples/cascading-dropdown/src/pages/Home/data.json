@@ -338,7 +338,14 @@
           { "city": "Kolar" },
           { "city": "Koppal" },
           { "city": "Mandya" },
-          { "city": "Mysuru" },
+          { "city": "Mysuru",
+            "areas":[
+                { "area" : "Kuvempunagara"},
+                { "area" : "Hootgalli"},
+                { "area" : "Vijayanagara"},
+                { "area" : "Jayanagara"}
+            ]
+           },
           { "city": "Raichur" },
           { "city": "Ramanagara" },
           { "city": "Shimoga" },
@@ -1267,6 +1274,666 @@
           { "city": "Katherine" },
           { "city": "Barkly" },
           { "city": "Arnhem Land" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Canada",
+    "regions": [
+      {
+        "region": "Ontario",
+        "cities": [
+          { "city": "Toronto" },
+          { "city": "Ottawa" },
+          { "city": "Mississauga" },
+          { "city": "Brampton" },
+          { "city": "Hamilton" }
+        ]
+      },
+      {
+        "region": "Quebec",
+        "cities": [
+          { "city": "Montreal" },
+          { "city": "Quebec City" },
+          { "city": "Laval" },
+          { "city": "Gatineau" },
+          { "city": "Sherbrooke" }
+        ]
+      },
+      {
+        "region": "British Columbia",
+        "cities": [
+          { "city": "Vancouver" },
+          { "city": "Victoria" },
+          { "city": "Richmond" },
+          { "city": "Burnaby" },
+          { "city": "Surrey" }
+        ]
+      },
+      {
+        "region": "Alberta",
+        "cities": [
+          { "city": "Calgary" },
+          { "city": "Edmonton" },
+          { "city": "Red Deer" },
+          { "city": "Lethbridge" },
+          { "city": "Fort McMurray" }
+        ]
+      },
+      {
+        "region": "Manitoba",
+        "cities": [
+          { "city": "Winnipeg" },
+          { "city": "Brandon" },
+          { "city": "Portage la Prairie" },
+          { "city": "Thompson" },
+          { "city": "Selkirk" }
+        ]
+      },
+      {
+        "region": "Saskatchewan",
+        "cities": [
+          { "city": "Saskatoon" },
+          { "city": "Regina" },
+          { "city": "Prince Albert" },
+          { "city": "Moose Jaw" },
+          { "city": "Swift Current" }
+        ]
+      },
+      {
+        "region": "Nova Scotia",
+        "cities": [
+          { "city": "Halifax" },
+          { "city": "Sydney" },
+          { "city": "Dartmouth" },
+          { "city": "Truro" },
+          { "city": "New Glasgow" }
+        ]
+      },
+      {
+        "region": "Newfoundland and Labrador",
+        "cities": [
+          { "city": "St. John's" },
+          { "city": "Mount Pearl" },
+          { "city": "Corner Brook" },
+          { "city": "Gander" },
+          { "city": "Happy Valley-Goose Bay" }
+        ]
+      },
+      {
+        "region": "Prince Edward Island",
+        "cities": [
+          { "city": "Charlottetown" },
+          { "city": "Summerside" },
+          { "city": "Montague" },
+          { "city": "Souris" },
+          { "city": "West Prince" }
+        ]
+      },
+      {
+        "region": "Northwest Territories",
+        "cities": [
+          { "city": "Yellowknife" },
+          { "city": "Hay River" },
+          { "city": "Inuvik" },
+          { "city": "Fort Smith" },
+          { "city": "Behchoko" }
+        ]
+      },
+      {
+        "region": "Yukon",
+        "cities": [
+          { "city": "Whitehorse" },
+          { "city": "Dawson City" },
+          { "city": "Haines Junction" },
+          { "city": "Watson Lake" },
+          { "city": "Carcross" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Germany",
+    "regions": [
+      {
+        "region": "Bavaria",
+        "cities": [
+          { "city": "Munich" },
+          { "city": "Nuremberg" },
+          { "city": "Augsburg" },
+          { "city": "Regensburg" },
+          { "city": "Würzburg" }
+        ]
+      },
+      {
+        "region": "Berlin",
+        "cities": [{ "city": "Berlin" }]
+      },
+      {
+        "region": "Hamburg",
+        "cities": [{ "city": "Hamburg" }]
+      },
+      {
+        "region": "Hesse",
+        "cities": [
+          { "city": "Frankfurt" },
+          { "city": "Wiesbaden" },
+          { "city": "Kassel" },
+          { "city": "Darmstadt" },
+          { "city": "Offenbach" }
+        ]
+      },
+      {
+        "region": "North Rhine-Westphalia",
+        "cities": [
+          { "city": "Cologne" },
+          { "city": "Düsseldorf" },
+          { "city": "Dortmund" },
+          { "city": "Essen" },
+          { "city": "Duisburg" }
+        ]
+      },
+      {
+        "region": "Saxony",
+        "cities": [
+          { "city": "Dresden" },
+          { "city": "Leipzig" },
+          { "city": "Chemnitz" },
+          { "city": "Zwickau" },
+          { "city": "Plauen" }
+        ]
+      },
+      {
+        "region": "Baden-Württemberg",
+        "cities": [
+          { "city": "Stuttgart" },
+          { "city": "Freiburg" },
+          { "city": "Karlsruhe" },
+          { "city": "Heidelberg" },
+          { "city": "Mannheim" }
+        ]
+      },
+      {
+        "region": "Rhineland-Palatinate",
+        "cities": [
+          { "city": "Mainz" },
+          { "city": "Koblenz" },
+          { "city": "Trier" },
+          { "city": "Ludwigshafen" },
+          { "city": "Neuwied" }
+        ]
+      },
+      {
+        "region": "Saarland",
+        "cities": [
+          { "city": "Saarbrücken" },
+          { "city": "Homburg" },
+          { "city": "Völklingen" },
+          { "city": "Merzig" },
+          { "city": "St. Wendel" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "France",
+    "regions": [
+      {
+        "region": "Île-de-France",
+        "cities": [
+          { "city": "Paris" },
+          { "city": "Versailles" },
+          { "city": "Boulogne-Billancourt" },
+          { "city": "Saint-Denis" },
+          { "city": "Nanterre" }
+        ]
+      },
+      {
+        "region": "Provence-Alpes-Côte d'Azur",
+        "cities": [
+          { "city": "Marseille" },
+          { "city": "Nice" },
+          { "city": "Toulon" },
+          { "city": "Avignon" },
+          { "city": "Arles" }
+        ]
+      },
+      {
+        "region": "Auvergne-Rhône-Alpes",
+        "cities": [
+          { "city": "Lyon" },
+          { "city": "Grenoble" },
+          { "city": "Clermont-Ferrand" },
+          { "city": "Saint-Étienne" },
+          { "city": "Valence" }
+        ]
+      },
+      {
+        "region": "Bretagne",
+        "cities": [
+          { "city": "Rennes" },
+          { "city": "Brest" },
+          { "city": "Quimper" },
+          { "city": "Vannes" },
+          { "city": "Lorient" }
+        ]
+      },
+      {
+        "region": "Normandie",
+        "cities": [
+          { "city": "Rouen" },
+          { "city": "Caen" },
+          { "city": "Le Havre" },
+          { "city": "Évreux" },
+          { "city": "Alençon" }
+        ]
+      },
+      {
+        "region": "Hauts-de-France",
+        "cities": [
+          { "city": "Lille" },
+          { "city": "Amiens" },
+          { "city": "Calais" },
+          { "city": "Dunkerque" },
+          { "city": "Lens" }
+        ]
+      },
+      {
+        "region": "Occitanie",
+        "cities": [
+          { "city": "Toulouse" },
+          { "city": "Montpellier" },
+          { "city": "Nîmes" },
+          { "city": "Perpignan" },
+          { "city": "Carcassonne" }
+        ]
+      },
+      {
+        "region": "Nouvelle-Aquitaine",
+        "cities": [
+          { "city": "Bordeaux" },
+          { "city": "Poitiers" },
+          { "city": "La Rochelle" },
+          { "city": "Limoges" },
+          { "city": "Périgueux" }
+        ]
+      },
+      {
+        "region": "Centre-Val de Loire",
+        "cities": [
+          { "city": "Orléans" },
+          { "city": "Tours" },
+          { "city": "Bourges" },
+          { "city": "Châteauroux" },
+          { "city": "Blois" }
+        ]
+      },
+      {
+        "region": "Alsace",
+        "cities": [
+          { "city": "Strasbourg" },
+          { "city": "Colmar" },
+          { "city": "Mulhouse" },
+          { "city": "Sélestat" },
+          { "city": "Haguenau" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Italy",
+    "regions": [
+      {
+        "region": "Lazio",
+        "cities": [
+          { "city": "Rome" },
+          { "city": "Latina" },
+          { "city": "Frosinone" },
+          { "city": "Viterbo" },
+          { "city": "Rieti" }
+        ]
+      },
+      {
+        "region": "Lombardy",
+        "cities": [
+          { "city": "Milan" },
+          { "city": "Bergamo" },
+          { "city": "Brescia" },
+          { "city": "Monza" },
+          { "city": "Pavia" }
+        ]
+      },
+      {
+        "region": "Veneto",
+        "cities": [
+          { "city": "Venice" },
+          { "city": "Verona" },
+          { "city": "Vicenza" },
+          { "city": "Padua" },
+          { "city": "Treviso" }
+        ]
+      },
+      {
+        "region": "Tuscany",
+        "cities": [
+          { "city": "Florence" },
+          { "city": "Pisa" },
+          { "city": "Siena" },
+          { "city": "Lucca" },
+          { "city": "Arezzo" }
+        ]
+      },
+      {
+        "region": "Campania",
+        "cities": [
+          { "city": "Naples" },
+          { "city": "Salerno" },
+          { "city": "Caserta" },
+          { "city": "Avellino" },
+          { "city": "Benevento" }
+        ]
+      },
+      {
+        "region": "Sicily",
+        "cities": [
+          { "city": "Palermo" },
+          { "city": "Catania" },
+          { "city": "Messina" },
+          { "city": "Syracuse" },
+          { "city": "Trapani" }
+        ]
+      },
+      {
+        "region": "Piedmont",
+        "cities": [
+          { "city": "Turin" },
+          { "city": "Novara" },
+          { "city": "Alessandria" },
+          { "city": "Astı" },
+          { "city": "Cuneo" }
+        ]
+      },
+      {
+        "region": "Emilia-Romagna",
+        "cities": [
+          { "city": "Bologna" },
+          { "city": "Modena" },
+          { "city": "Parma" },
+          { "city": "Ravenna" },
+          { "city": "Ferrara" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Spain",
+    "regions": [
+      {
+        "region": "Madrid",
+        "cities": [{ "city": "Madrid" }]
+      },
+      {
+        "region": "Catalonia",
+        "cities": [
+          { "city": "Barcelona" },
+          { "city": "Girona" },
+          { "city": "Tarragona" },
+          { "city": "Lleida" }
+        ]
+      },
+      {
+        "region": "Andalusia",
+        "cities": [
+          { "city": "Seville" },
+          { "city": "Malaga" },
+          { "city": "Granada" },
+          { "city": "Córdoba" },
+          { "city": "Jaén" }
+        ]
+      },
+      {
+        "region": "Valencia",
+        "cities": [
+          { "city": "Valencia" },
+          { "city": "Alicante" },
+          { "city": "Castellón" }
+        ]
+      },
+      {
+        "region": "Galicia",
+        "cities": [
+          { "city": "Santiago de Compostela" },
+          { "city": "A Coruña" },
+          { "city": "Lugo" },
+          { "city": "Ourense" }
+        ]
+      },
+      {
+        "region": "Basque Country",
+        "cities": [
+          { "city": "Bilbao" },
+          { "city": "San Sebastián" },
+          { "city": "Vitoria-Gasteiz" }
+        ]
+      },
+      {
+        "region": "Aragon",
+        "cities": [
+          { "city": "Zaragoza" },
+          { "city": "Huesca" },
+          { "city": "Teruel" }
+        ]
+      },
+      {
+        "region": "Castile and León",
+        "cities": [
+          { "city": "Valladolid" },
+          { "city": "León" },
+          { "city": "Salamanca" },
+          { "city": "Segovia" },
+          { "city": "Ávila" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "South Korea",
+    "regions": [
+      {
+        "region": "Seoul",
+        "cities": [{ "city": "Seoul" }]
+      },
+      {
+        "region": "Busan",
+        "cities": [{ "city": "Busan" }]
+      },
+      {
+        "region": "Incheon",
+        "cities": [{ "city": "Incheon" }]
+      },
+      {
+        "region": "Gyeonggi",
+        "cities": [
+          { "city": "Suwon" },
+          { "city": "Goyang" },
+          { "city": "Yongin" },
+          { "city": "Seongnam" },
+          { "city": "Ansan" }
+        ]
+      },
+      {
+        "region": "Gangwon",
+        "cities": [
+          { "city": "Chuncheon" },
+          { "city": "Wonju" },
+          { "city": "Gangneung" },
+          { "city": "Samcheok" },
+          { "city": "Donghae" }
+        ]
+      },
+      {
+        "region": "Jeolla",
+        "cities": [
+          { "city": "Gwangju" },
+          { "city": "Jeonju" },
+          { "city": "Mokpo" },
+          { "city": "Yeosu" },
+          { "city": "Suncheon" }
+        ]
+      },
+      {
+        "region": "Gyeongsang",
+        "cities": [
+          { "city": "Daegu" },
+          { "city": "Ulsan" },
+          { "city": "Gyeongju" },
+          { "city": "Pohang" },
+          { "city": "Changwon" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "South Africa",
+    "regions": [
+      {
+        "region": "Gauteng",
+        "cities": [
+          { "city": "Johannesburg" },
+          { "city": "Pretoria" },
+          { "city": "Midrand" },
+          { "city": "Soweto" },
+          { "city": "Ekurhuleni" }
+        ]
+      },
+      {
+        "region": "Western Cape",
+        "cities": [
+          { "city": "Cape Town" },
+          { "city": "George" },
+          { "city": "Paarl" },
+          { "city": "Stellenbosch" },
+          { "city": "Mossel Bay" }
+        ]
+      },
+      {
+        "region": "KwaZulu-Natal",
+        "cities": [
+          { "city": "Durban" },
+          { "city": "Pietermaritzburg" },
+          { "city": "Richards Bay" },
+          { "city": "Umlazi" },
+          { "city": "Newcastle" }
+        ]
+      },
+      {
+        "region": "Eastern Cape",
+        "cities": [
+          { "city": "Port Elizabeth" },
+          { "city": "East London" },
+          { "city": "Grahamstown" },
+          { "city": "Umtata" },
+          { "city": "Kirkwood" }
+        ]
+      },
+      {
+        "region": "Limpopo",
+        "cities": [
+          { "city": "Polokwane" },
+          { "city": "Tzaneen" },
+          { "city": "Bela-Bela" },
+          { "city": "Mokopane" },
+          { "city": "Phalaborwa" }
+        ]
+      },
+      {
+        "region": "Free State",
+        "cities": [
+          { "city": "Bloemfontein" },
+          { "city": "Welkom" },
+          { "city": "Sasolburg" },
+          { "city": "Kroonstad" },
+          { "city": "Harrismith" }
+        ]
+      },
+      {
+        "region": "North West",
+        "cities": [
+          { "city": "Mahikeng" },
+          { "city": "Rustenburg" },
+          { "city": "Klerksdorp" },
+          { "city": "Zeerust" },
+          { "city": "Mafikeng" }
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Mexico",
+    "regions": [
+      {
+        "region": "Mexico City",
+        "cities": [{ "city": "Mexico City" }]
+      },
+      {
+        "region": "Jalisco",
+        "cities": [
+          { "city": "Guadalajara" },
+          { "city": "Tlaquepaque" },
+          { "city": "Tonala" },
+          { "city": "Puerto Vallarta" },
+          { "city": "Tequila" }
+        ]
+      },
+      {
+        "region": "Nuevo León",
+        "cities": [
+          { "city": "Monterrey" },
+          { "city": "San Pedro Garza García" },
+          { "city": "Santa Catarina" },
+          { "city": "Apodaca" },
+          { "city": "Escobedo" }
+        ]
+      },
+      {
+        "region": "Puebla",
+        "cities": [
+          { "city": "Puebla" },
+          { "city": "Cholula" },
+          { "city": "Atlixco" },
+          { "city": "Tehuacán" },
+          { "city": "San Martín Texmelucan" }
+        ]
+      },
+      {
+        "region": "Yucatán",
+        "cities": [
+          { "city": "Mérida" },
+          { "city": "Valladolid" },
+          { "city": "Progreso" },
+          { "city": "Tizimin" },
+          { "city": "Izamal" }
+        ]
+      },
+      {
+        "region": "Guanajuato",
+        "cities": [
+          { "city": "Guanajuato City" },
+          { "city": "León" },
+          { "city": "Irapuato" },
+          { "city": "Celaya" },
+          { "city": "San Miguel de Allende" }
+        ]
+      },
+      {
+        "region": "Querétaro",
+        "cities": [
+          { "city": "Querétaro" },
+          { "city": "El Marqués" },
+          { "city": "San Juan del Río" },
+          { "city": "El Pueblito" },
+          { "city": "Juriquilla" }
         ]
       }
     ]

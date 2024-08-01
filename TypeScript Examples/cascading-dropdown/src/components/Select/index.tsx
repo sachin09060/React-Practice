@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dropdown.css";
+import "./Select.css";
 import Select from "react-select";
 
 interface selectProps {
