@@ -6,25 +6,25 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="nav-container">
-        <nav>
+        <nav className="nav">
           <div className="navlist-container">
             <ul>
               <div className="nav-items">
-                <li>
+              <li>
                   <Link className="link-title" to={"/"}>
-                    Home
+                    Link 1
                   </Link>
                 </li>
                 <li>
-                  <Link className="link-title" to={"/form"}>
-                    Form
+                  <Link className="link-title" to={"/link2"}>
+                    Link 2
                   </Link>
                 </li>
                 <li>
-                  <NavLink to={"/thank-you"}>Thank-you</NavLink>
+                  <NavLink className="navlink-title" to={"/navlink"}>NavLink 1</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/thank-you2"}>Thank-you2</NavLink>
+                  <NavLink className="navlink-title" to={"/navlink2"}>NavLink 2</NavLink>
                 </li>
               </div>
             </ul>

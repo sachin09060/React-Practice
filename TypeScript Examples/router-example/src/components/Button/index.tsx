@@ -1,14 +1,16 @@
 import React from "react";
+import "./Button.css"
 
 interface ButtonProps {
-  type: any;
+  type?: any;
   label: string;
+  onClick: () => void;
 }
 
 const Button = (props: ButtonProps) => {
   return (
     <div>
-      <button type={props.type}>{props.label}</button>
+      <button className="btn-container" type={props.type} onClick={props.onClick} >{props.label}</button>
     </div>
   );
 };

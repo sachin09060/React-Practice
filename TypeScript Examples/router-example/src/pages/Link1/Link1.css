@@ -1,0 +1,45 @@
+.link-container{
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: 80dvh;
+}
+
+.link-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 2.5%;
+    height: 70dvh;
+    background-color: rgba(105, 105, 105, 0.804);
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.link-heading{
+    color: rgb(237, 181, 143);
+}
+
+.link-description{
+    width: 60%;
+}
+
+.link-description span{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.link-btn-description{
+    width: 60%;
+    text-align: center;
+    color: rgb(197, 217, 237);
+}
+
+.link-btn-description span{
+    font-size: larger;
+    font-weight: bold;
+}

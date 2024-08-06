@@ -1,0 +1,13 @@
+.layout-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.outlet-container{
+    width: 100dvw;
+    height: fit-content;
+}
+
+.outlet-container img{
+    width: 500px;
+}

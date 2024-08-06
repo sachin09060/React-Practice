@@ -1,0 +1,9 @@
+.error-container{
+    padding-top: 40px;
+    height: 80vh;
+}
+
+.error404 img{
+    height: 500px;
+    width: 500px;
+}

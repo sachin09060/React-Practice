@@ -5,6 +5,7 @@
     justify-content: center;
     width: 100vw;
     margin: 0px;
+    background-color: rgb(80, 76, 76);
   }
   
   ul {
@@ -13,17 +14,21 @@
   
   a:link{
     text-decoration: none;
+    font-weight: 900;
+    color: aliceblue;
   }
-
-  nav a.active{
+  .navlink-title{
+    color: aliceblue;
+  }
+  
+  .nav a.active{
     text-decoration: none;
     font-weight: 900;
-    font-size: x-large;
+    color: rgb(20, 131, 228);
   }
   
-  
   .link-title{
-      color: rgb(0, 6, 11);
+    color: aliceblue;
   }
   
   .nav-items {

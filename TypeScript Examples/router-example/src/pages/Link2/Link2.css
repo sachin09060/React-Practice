@@ -1,0 +1,27 @@
+.link2-container{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link2-description{
+    width: 80%;
+}
+
+.link2-button-container{
+    display: flex;
+    gap: 5px;
+    padding-top: 60px;
+}
+
+.link2-container img {
+    width: 1000px;
+    margin: 20px;
+}
+
+.link2-img-description{
+    font-weight: bold;
+    font-size: 35px;
+}
