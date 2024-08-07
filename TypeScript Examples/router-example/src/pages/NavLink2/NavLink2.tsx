@@ -9,9 +9,7 @@ const ThankYou2 = () => {
   const handleBack = () => {
     navigate("/navlink");
   };
-  const handleLoading = () => {
-    navigate("/loading");
-  };
+
   const handleErrorPage = () => {
     navigate("*");
   };
@@ -23,7 +21,6 @@ const ThankYou2 = () => {
           <h1 className="navlink2-heading">NavLink Page 2</h1>
           <div className="navlink2-button-container">
             <Button onClick={handleBack} label="Previous page" />
-            <Button onClick={handleLoading} label="Click here to loading" />
             <Button onClick={handleErrorPage} label="Click here to Errorpage" />
           </div>
         </div>

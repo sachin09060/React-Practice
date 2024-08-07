@@ -20,12 +20,21 @@ import {
 
 import React, { lazy, Suspense } from "react";
 import Layout from "../layout/Layout";
+import { resolve } from "path";
 const Link1 = lazy(() => import("../pages/Link1/Link1"));
-const Link2 = lazy(() => import("../pages/Link2/Link2"));
+const Link2 = lazy(() => wait(1000).then( () => import("../pages/Link2/Link2")));
 const NavLink1 = lazy(() => import("../pages/NavLink1/NavLink1"));
 const NavLink2 = lazy(() => import("../pages/NavLink2/NavLink2"));
 const ErrorPage = lazy(() => import("./../pages/Error/ErrorPage"));
 const LoadingPage = lazy(() => import("./../components/Loading/index"));
+
+// Creating delay time function to see the loading page_____________________________________________________________________________
+
+const wait = (time: number) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+};
 
 const Router = () => {
   return (
@@ -74,10 +83,9 @@ const Router = () => {
     // Dynamic Lazy import(BrowserRouter)________________________________________________________________________________________________
 
     <BrowserRouter basename="/app">
-      <Suspense fallback={<LoadingPage/>}>
+      <Suspense fallback={<LoadingPage />}>
         <Routes>
           <Route path="*" element={<ErrorPage />} />
-          <Route path="loading" element={<LoadingPage />} />
           <Route element={<Layout />}>
             <Route index element={<Link1 />} />
             <Route path="link2" element={<Link2 />} />

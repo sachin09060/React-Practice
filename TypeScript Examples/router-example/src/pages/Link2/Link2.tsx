@@ -480,7 +480,7 @@ const Link1 = () => {
         <p className="link2-img-description">
           High resolution image (23.8 MB)
         </p>
-        <img src={img} alt="" />
+        <img src={img} alt="" loading="lazy" />
       </div>
     </>
   );
