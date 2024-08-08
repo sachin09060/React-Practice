@@ -1,15 +1,24 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import "./Button.css";
 
 interface ButtonProps {
-  onClick: any;
+  onClick: () => void;
   label: string;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
-const Button = (props: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({
+  onClick,
+  label,
+  disabled = false,
+  type = "button",
+}) => {
   return (
     <div className="button-container">
-      <button onClick={props.onClick}>{props.label}</button>
+      <button onClick={onClick} disabled={disabled} type={type}>
+        {label}
+      </button>
     </div>
   );
 };

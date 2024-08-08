@@ -1,58 +1,92 @@
 import React, { useState } from "react";
-import Input from "../../components/Input";
 import Button from "../../components/Button";
+import "./Post.css";
 
 const Post = () => {
-  const [inpValue, setInpValue] = useState("");
   const [title, setTitle] = useState("");
-  const [status, setStatus] = useState("");
+  const [userId, setUserId] = useState<number | null>(null);
+  const [completed, setCompleted] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleClick = () => {};
-
-  const handleSubmit = () => {};
-
-  const handlePost = () => {
-    fetch("https://jsonplaceholder.typicode.com/todos", {
-      method: "POST",
-      body: JSON.stringify({
-        title: {},
-        completed: {},
-        userId: {},
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+  const handleSubmit = async () => {
+    if (userId === null) {
+      alert("User ID is required");
+      return;
+    }
+    setLoading(true);
+    setError(null);
+  
+    try {
+      const response = await fetch("http://localhost:3001/todos", { // Correct URL
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title,
+          userId,
+          completed,
+        }),
+      });
+  
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to create to-do: ${errorText}`);
+      }
+  
+      const data = await response.json();
+      console.log("Success:", data);
+      alert("To-do created successfully!");
+  
+      setTitle("");
+      setUserId(null);
+      setCompleted(false);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("Error:", error);
+        setError(`Failed to create to-do. Please try again. Error: ${error.message}`);
+      } else {
+        console.error("Unexpected error:", error);
+        setError("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
+  
 
   return (
     <div className="post-container">
-      <form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          label="User ID :"
-          placeholder="Enter user ID..."
-          value={inpValue}
-          onChange={(e) => setInpValue(e.target.value)}
-        />
-        <Input
-          type="text"
-          label="Title :"
-          placeholder="Enter title..."
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <Input
-          type="text"
-          label="Status :"
-          placeholder="Enter completion status..."
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
-        />
-        <Button label="Submit" onClick={handleClick} />
-      </form>
+      <h2>Create a To-Do</h2>
+      <input
+        type="number"
+        placeholder="Enter User ID"
+        value={userId ?? ""}
+        onChange={(e) => setUserId(Number(e.target.value))}
+      />
+      <input
+        type="text"
+        placeholder="Enter Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <div className="checkbox-container">
+        <label>
+          Completed:
+          <input
+            type="checkbox"
+            checked={completed}
+            onChange={(e) => setCompleted(e.target.checked)}
+          />
+        </label>
+      </div>
+      {error && <p className="error-message">{error}</p>}
+      <Button
+        onClick={handleSubmit}
+        label={loading ? "Loading..." : "Submit"}
+        disabled={loading}
+      />
     </div>
   );
 };
