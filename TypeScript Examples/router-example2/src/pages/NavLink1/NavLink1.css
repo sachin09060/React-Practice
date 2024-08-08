@@ -1,0 +1,50 @@
+.navlink-container{
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: 80dvh;
+    color: #fff;
+}
+
+.navlink-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 2.5%;
+    height: 70dvh;
+}
+
+.navlink-heading{
+    color: #f1f8e8;
+  }
+
+.navlink-description{
+    width: 60%;
+}
+
+.navlink-description span{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.navlink-btn-description{
+    width: 60%;
+    text-align: center;
+    color: #F1F8E8;
+    font-size: 25px;
+}
+
+.navlink-btn-description span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navlink-button-container{
+    display: flex;
+    gap: 5px;
+    padding: 40px;
+}

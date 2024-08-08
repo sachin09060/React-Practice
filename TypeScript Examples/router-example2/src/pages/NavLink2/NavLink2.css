@@ -1,0 +1,21 @@
+.navlink2-container{
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 80dvh;
+    color: #fff;
+    width: 100svw;
+}
+
+.navlink2-heading{
+    color: #f1f8e8;
+  }
+
+.navlink2-button-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

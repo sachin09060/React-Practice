@@ -1,0 +1,12 @@
+.footer-container {
+  position: relative;
+  height: fit-content;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    width: 80%;
+    font-size: 50%;
+  }
+}
