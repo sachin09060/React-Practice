@@ -16,7 +16,15 @@
     margin-top: 2.5%;
     height: 70dvh;
     width: 1336.250px;
-    background-color: rgba(105, 105, 105, 0.804);
+    background: rgb(11, 11, 149);
+    background: radial-gradient(
+      circle,
+      rgba(11, 11, 149, 1) 0%,
+      rgba(2, 0, 36, 0.764) 100%,
+      rgba(0, 213, 255, 0.84) 100%
+    );
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
     color: rgb(255, 255, 255);
     border-radius: 25px;
 }

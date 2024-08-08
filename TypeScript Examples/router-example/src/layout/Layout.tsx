@@ -25,11 +25,11 @@ const Layout = () => {
 
     // using useOutlet() Hook
     <div className="layout-container">
-      <div>
+      <div className="layout-header">
         <Header />
       </div>
       <div className="outlet-container">{outlet}</div>
-      <div>
+      <div className="layout-footer">
         <Footer />
       </div>
     </div>
