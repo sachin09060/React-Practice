@@ -1,0 +1,9 @@
+.button-container button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(25, 25, 73);
+    color: #fff;
+    margin: 20px;
+}
