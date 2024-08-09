@@ -3,14 +3,16 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 10px;
 }
 
 .data-card {
+  margin-top: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  align-items: start;
+  text-align: start;
+  height: fit-content;
 }
 
 .instruction{
@@ -20,4 +22,20 @@
     text-align: center;
     font-size: 25px;
     font-weight: 700;
+}
+
+.get-heading{
+  font-family: "Corinthia", system-ui;
+  font-size: 40px;
+}
+
+.get-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headeing{
+  margin-top: 0;
+  margin-bottom: 0;
 }

@@ -5,7 +5,7 @@ import Header from "../components/Header";
 const Layout = () => {
   return (
     <div className="layout-container">
-      <div>
+      <div className="layoutheader-container">
         <Header />
       </div>
       <div className="outlet-component">

@@ -1,57 +1,125 @@
 import React, { useState } from "react";
+import "./Post.css";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
+interface FormData {
+  name: string;
+  age: number | string;
+  address: string;
+  phone: string;
+  email: string;
+  gender: string;
+}
+
 const Post = () => {
-  const [inpValue, setInpValue] = useState("");
-  const [title, setTitle] = useState("");
-  const [status, setStatus] = useState("");
+  const [newData, setNewData] = useState<FormData | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    age: "",
+    address: "",
+    phone: "",
+    email: "",
+    gender: "",
+  });
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const handleClick = () => {};
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch(
+        "https://66b5b740b5ae2d11eb64633a.mockapi.io/api/users/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-  const handleSubmit = () => {};
+      if (response.ok) {
+        setMessage("User added successfully.");
+      }
 
-  const handlePost = () => {
-    fetch("https://jsonplaceholder.typicode.com/todos", {
-      method: "POST",
-      body: JSON.stringify({
-        title: {},
-        completed: {},
-        userId: {},
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+      const newPost = await response.json();
+      setNewData(newPost);
+    } catch (error) {
+      console.error("Error submitting form", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: type === "number" ? Number(value) : value,
+    }));
   };
 
   return (
     <div className="post-container">
-      <form onSubmit={handleSubmit}>
+      <div className="post-heading">
+        <h2>Post page using fetch()</h2>
+      </div>
+      <form className="post-card" onSubmit={handleSubmit}>
         <Input
           type="text"
-          label="User ID :"
-          placeholder="Enter user ID..."
-          value={inpValue}
-          onChange={(e) => setInpValue(e.target.value)}
+          name="name"
+          label="Name :"
+          placeholder="Enter Your Name..."
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <Input
+          type="number"
+          name="age"
+          label="Age :"
+          placeholder="Enter Your Age..."
+          value={formData.age}
+          onChange={handleChange}
         />
         <Input
           type="text"
-          label="Title :"
-          placeholder="Enter title..."
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          name="gender"
+          label="Gender :"
+          placeholder="Enter Your Gender..."
+          value={formData.gender}
+          onChange={handleChange}
         />
         <Input
           type="text"
-          label="Status :"
-          placeholder="Enter completion status..."
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
+          name="address"
+          label="Address :"
+          placeholder="Enter Your Address..."
+          value={formData.address}
+          onChange={handleChange}
         />
-        <Button label="Submit" onClick={handleClick} />
+        <Input
+          type="text"
+          name="phone"
+          label="Phone :"
+          placeholder="Enter Your Phone Number..."
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        <Input
+          type="text"
+          name="email"
+          label="Email :"
+          placeholder="Enter Your Email..."
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <Button
+          type="submit"
+          label={loading ? "Loading..." : "Submit"}
+          disabled={loading}
+        />
       </form>
     </div>
   );

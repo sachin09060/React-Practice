@@ -5,29 +5,43 @@ import Card from "../../components/Card/Card";
 
 interface apiProps {
   id: number;
-  title: string;
-  userId: number;
-  completed: boolean;
+  name: string;
+  age: number;
+  address: string;
+  phone: string;
+  email: string;
+  gender: string;
 }
 
 const Get = () => {
   const [data, setData] = useState<apiProps[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const handleGet = () => {
     try {
-      fetch("https://jsonplaceholder.typicode.com/todos")
+      fetch("https://66b5b740b5ae2d11eb64633a.mockapi.io/api/users/")
         .then((response) => response.json())
         .then((json) => setData(json));
+      setLoading(true);
     } catch (error) {
       console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <>
       <div className="get-container">
+        <div className="get-heading">
+          <h2 className="headeing">Get page using fetch()</h2>
+        </div>
         <div className="btn-container">
-          <Button onClick={handleGet} label={"Get Data"} />
+          <Button
+            onClick={handleGet}
+            label={loading ? "Loading..." : "Get all data!"}
+            disabled={loading}
+          />
         </div>
 
         <div className="data-container">
@@ -37,9 +51,12 @@ const Get = () => {
                 <div key={item.id}>
                   <Card
                     id={item.id}
-                    userId={item.userId}
-                    title={item.title}
-                    status={item.completed ? "Yes" : "No"}
+                    name={item.name}
+                    age={item.age}
+                    address={item.address}
+                    phone={item.phone}
+                    email={item.email}
+                    gender={item.gender}
                   />
                 </div>
               ))}
@@ -50,24 +67,6 @@ const Get = () => {
             </div>
           )}
         </div>
-
-        {/* <div className="data-container">
-          {data.length > 0 ? (
-            <ul>
-              {data.map((item) => (
-                <div>
-                  <li key={item.id}>
-                    <p>Title: {item.title}</p>
-                    <p>User ID:{item.userId}</p>
-                    <p>Completed:{item.completed ? "Yes" : "No"}</p>
-                  </li>
-                </div>
-              ))}
-            </ul>
-          ) : (
-            <p>Click above Button to Get all Data !</p>
-          )}
-        </div> */}
       </div>
     </>
   );

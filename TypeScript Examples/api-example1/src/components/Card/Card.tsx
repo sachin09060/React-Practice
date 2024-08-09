@@ -3,26 +3,37 @@ import "./Card.css";
 
 interface CardProps {
   id: number;
-  userId: number;
-  title: string;
-  status: string;
+  name: string;
+  age: number;
+  address: string;
+  phone: string;
+  email: string;
+  gender: string;
 }
 
 const Card = (props: CardProps) => {
   return (
     <div className="cardOuter-container">
       <div className="card-container">
-        <div className="card-id">
-          <p>Card Id : {props.id}</p>
-        </div>
-        <div className="card-userId">
-          <p>User Id : {props.userId}</p>
-        </div>
         <div className="card-title">
-          <p> Title : {props.title}</p>
+          <p>Name : {props.name}</p>
         </div>
-        <div className="card-status">
-          <p>Status : {props.status}</p>
+        <div>
+          <div className="card-items">
+            <p>User Id : {props.id}</p>
+          </div>
+          <div className="card-items">
+            <p> Age : {props.age}</p>
+          </div>
+          <div className="card-items">
+            <p>Address : {props.address}</p>
+          </div>
+          <div className="card-items">
+            <p>Phone : {props.phone}</p>
+          </div>
+          <div className="card-items">
+            <p>Email : {props.email}</p>
+          </div>
         </div>
       </div>
     </div>

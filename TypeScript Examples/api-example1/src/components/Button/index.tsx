@@ -1,15 +1,17 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import "./Button.css";
 
 interface ButtonProps {
-  onClick: any;
+  onClick?: any;
   label: string;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 const Button = (props: ButtonProps) => {
   return (
     <div className="button-container">
-      <button onClick={props.onClick}>{props.label}</button>
+      <button onClick={props.onClick} type={props.type}>{props.label}</button>
     </div>
   );
 };

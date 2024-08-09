@@ -1,8 +1,10 @@
 .header-container {
+  position: 0;
   display: flex;
   justify-content: space-evenly;
   background-color: black;
   color: #fff;
+  width: 100%;
 }
 
 .nav-container {

@@ -1,0 +1,34 @@
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-label {
+  font-size: large;
+  font-family: "Yeseva One", system-ui;
+}
+
+.input-box {
+  border: none;
+  appearance: none;
+  width: 100%;
+  position: relative;
+  border-radius: 3px;
+  padding: 9px 12px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  height: 20px;
+  transition: all 0.2s ease;
+  margin: 3px;
+  box-shadow: inset 1px -1px 1px 1px #bfd4e9, inset -2px 2px 2px #bfd4e9;
+}
+
+.input-box :focus {
+  background: #fff;
+  outline: none;
+  box-shadow:#0af8bc 2px;
+}
+
+.input-box :hover {
+  box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
+}
