@@ -13,10 +13,13 @@ interface ApiProps {
 const Get = () => {
   const [data, setData] = useState<ApiProps[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleGet = async () => {
     try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos"
+      );
 
       if (!response.ok) {
         const errorText = await response.text();
@@ -25,21 +28,30 @@ const Get = () => {
 
       const json = await response.json();
       setData(json);
+      setLoading(true);
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error("Error fetching data:", error);
-        setError(`Failed to fetch data. Please try again. Error: ${error.message}`);
+        setError(
+          `Failed to fetch data. Please try again. Error: ${error.message}`
+        );
       } else {
         console.error("Unexpected error:", error);
         setError("An unexpected error occurred. Please try again.");
       }
+    }finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="get-container">
       <div className="btn-container">
-        <Button onClick={handleGet} label={"Get Data"} />
+        <Button
+          onClick={handleGet}
+          label={loading ? "Loading..." : "Get all data!"}
+          disabled={loading}
+        />
       </div>
 
       {error && <p className="error-message">{error}</p>}
@@ -49,8 +61,8 @@ const Get = () => {
           <div className="data-card">
             {data.map((item) => (
               <Card
-                key={item.id}
                 id={item.id}
+                key={item.id}
                 userId={item.userId}
                 title={item.title}
                 status={item.completed ? "Yes" : "No"}

@@ -16,9 +16,9 @@ const Post = () => {
     }
     setLoading(true);
     setError(null);
-  
+
     try {
-      const response = await fetch("http://localhost:3001/todos", { // Correct URL
+      await fetch("https://jsonplaceholder.typicode.com/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,36 +29,24 @@ const Post = () => {
           completed,
         }),
       });
-  
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Failed to create to-do: ${errorText}`);
-      }
-  
-      const data = await response.json();
-      console.log("Success:", data);
-      alert("To-do created successfully!");
-  
+      
+      console.log("Success! Data posted successfully.");
+      alert("Data posted successfully!");
       setTitle("");
       setUserId(null);
       setCompleted(false);
     } catch (error: unknown) {
-      if (error instanceof Error) {
         console.error("Error:", error);
-        setError(`Failed to create to-do. Please try again. Error: ${error.message}`);
-      } else {
-        console.error("Unexpected error:", error);
-        setError("An unexpected error occurred. Please try again.");
-      }
+        setError(`Failed to create todo. Please try again.`);
+
     } finally {
       setLoading(false);
     }
   };
-  
 
   return (
     <div className="post-container">
-      <h2>Create a To-Do</h2>
+      <h2>Post your data</h2>
       <input
         type="number"
         placeholder="Enter User ID"
