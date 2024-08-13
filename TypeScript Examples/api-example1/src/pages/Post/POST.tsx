@@ -3,7 +3,7 @@ import "./Post.css";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
-interface FormData {
+interface FormDataProps {
   name: string;
   age: number | string;
   address: string;
@@ -13,9 +13,9 @@ interface FormData {
 }
 
 const Post = () => {
-  const [newData, setNewData] = useState<FormData | null>(null);
+  const [newData, setNewData] = useState<FormDataProps | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormDataProps>({
     name: "",
     age: "",
     address: "",
@@ -46,6 +46,15 @@ const Post = () => {
 
       const newPost = await response.json();
       setNewData(newPost);
+      setMessage("User posted successfully.");
+      setFormData({
+        name: "",
+        age: "",
+        address: "",
+        phone: "",
+        email: "",
+        gender: "",
+      });
     } catch (error) {
       console.error("Error submitting form", error);
     } finally {
@@ -120,6 +129,7 @@ const Post = () => {
           label={loading ? "Loading..." : "Submit"}
           disabled={loading}
         />
+        {message && <p>{message}</p>}
       </form>
     </div>
   );

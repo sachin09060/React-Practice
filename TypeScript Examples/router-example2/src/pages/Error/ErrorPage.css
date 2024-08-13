@@ -1,9 +1,30 @@
 .error-container{
-    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
     height: 80vh;
 }
 
-.error404 img{
-    height: 500px;
-    width: 500px;
+.error-description h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.error404 h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    font-size: 200px;
+    color: #686D76;
+}
+
+.circle{
+    height: 220px;
+    width: 220px;
+    border-radius: 100%;
+    margin: 14% 0 0 42.8%;
+    position: fixed;
+    z-index: -1;
 }

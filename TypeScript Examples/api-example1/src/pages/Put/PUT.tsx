@@ -3,7 +3,7 @@ import "./Put.css";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
-interface FormData {
+interface FormDataProps {
   userId: number | string;
   name: string;
   age: number | string;
@@ -14,9 +14,9 @@ interface FormData {
 }
 
 const Put = () => {
-  const [newData, setNewData] = useState<FormData | null>(null);
+  const [newData, setNewData] = useState<FormDataProps | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormDataProps>({
     userId: "",
     name: "",
     age: "",
@@ -46,6 +46,15 @@ const Put = () => {
         const newPost = await response.json();
         setNewData(newPost);
         setMessage("User updated successfully.");
+        setFormData({
+          userId: "",
+          name: "",
+          age: "",
+          address: "",
+          phone: "",
+          email: "",
+          gender: "",
+        })
       } else {
         setMessage("Failed to update user.");
       }

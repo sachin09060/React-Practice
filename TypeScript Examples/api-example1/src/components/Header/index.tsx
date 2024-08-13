@@ -20,6 +20,9 @@ const Header = () => {
       <div className="nav-container">
         <NavLink to={"/delete"}>DELETE</NavLink>
       </div>
+      <div className="nav-container">
+        <NavLink to={"/pop-up"}>POP-UP</NavLink>
+      </div>
     </div>
   );
 };
