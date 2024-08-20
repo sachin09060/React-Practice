@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="Header-container text-white flex flex-row justify-center space-x-8 items-center h-6 w-dvw bg-[#17153B]">
+    <nav className="Header-container text-xs sm:text-sm text-white flex flex-row justify-center space-x-8 items-center h-min w-full bg-[#17153B] sm:shrink-0">
       <div>
         <NavLink className="nav-items" to="/">
           Home
@@ -27,6 +27,16 @@ const Header = () => {
       <div>
         <NavLink className="nav-items" to="/gridandflex1">
           Grid & Flex
+        </NavLink>
+      </div>
+      <div>
+        <NavLink className="nav-items" to="/error">
+          Error Page
+        </NavLink>
+      </div>
+      <div>
+        <NavLink className="nav-items" to="/newpage">
+          New Page
         </NavLink>
       </div>
     </nav>

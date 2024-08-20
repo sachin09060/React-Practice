@@ -24,6 +24,16 @@ const Navbar = () => {
           Grid & Flex
         </NavLink>
       </div>
+      <div>
+        <NavLink className="nav-items" to="/error">
+          Error Page
+        </NavLink>
+      </div>
+      <div>
+        <NavLink className="nav-items" to="/newpage">
+          New Page
+        </NavLink>
+      </div>
     </nav>
   );
 };
